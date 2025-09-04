@@ -128,3 +128,9 @@
         @apply mx-auto px-4 sm:px-6 lg:px-8;
     }
 }
+
+@layer utilities {
+    .no-focus {
+        @apply focus-visible:ring-0 focus-visible:ring-transparent;
+    }
+}

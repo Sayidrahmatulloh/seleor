@@ -1,4 +1,5 @@
 'use client'
+import { Title } from '@/components/lib/title'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
@@ -24,7 +25,7 @@ const SignInPage = () => {
   }
   return (
     <Card className='w-1/2 p-4'>
-      <h1 className='text-xl font-bold'>Sign In</h1>
+      <Title label='Sign In' />
       <p className='text-muted-foreground text-sm'>Welcome back! Please sign in to your account</p>
       <Form {...form}>
         <form

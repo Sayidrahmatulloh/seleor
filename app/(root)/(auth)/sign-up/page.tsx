@@ -1,4 +1,5 @@
 'use client'
+import { Title } from '@/components/lib/title'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import { Form, FormControl, FormField, FormItem, FormMessage } from '@/components/ui/form'
@@ -8,7 +9,7 @@ import { registerSchema } from '@/lib/validations'
 import { zodResolver } from '@hookform/resolvers/zod'
 import Link from 'next/link'
 import { useForm } from 'react-hook-form'
-import { z } from 'zod/v4-mini'
+import { z } from 'zod'
 
 const SignUpPage = () => {
   const form = useForm<z.infer<typeof registerSchema>>({
@@ -24,7 +25,7 @@ const SignUpPage = () => {
   }
   return (
     <Card className='w-1/2 p-4'>
-      <h1 className='text-xl font-bold'>Sign Up</h1>
+      <Title label='Sign Up' />
       <p className='text-muted-foreground text-sm'>
         Welcome to our platform! Please sign up to create an account
       </p>

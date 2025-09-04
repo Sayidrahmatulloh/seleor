@@ -1,4 +1,4 @@
-import { Logo } from '@/components/shared/lib/logo'
+import { Logo } from '@/components/lib/logo'
 import { Button } from '@/components/ui/button'
 import { UserIcon } from 'lucide-react'
 import Link from 'next/link'

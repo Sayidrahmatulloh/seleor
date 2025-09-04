@@ -1,0 +1,103 @@
+import { IProduct } from '@/types'
+
+export const products: IProduct[] = [
+  {
+    id: 1,
+    title: 'Wireless Bluetooth Headphones',
+    description:
+      'High-quality over-ear headphones with noise cancellation and 20-hour battery life.',
+    price: 45,
+    image: '',
+    category: 'Electronics',
+  },
+  {
+    id: 2,
+    title: 'Smartphone X12',
+    description: 'Latest 5G smartphone with 128GB storage and a 6.5-inch AMOLED display.',
+    price: 135,
+    image: '',
+    category: 'Electronics',
+  },
+  {
+    id: 3,
+    title: 'Leather Jacket',
+    description: 'Premium black leather jacket, perfect for casual and formal wear.',
+    price: 145,
+    image: '',
+    category: 'Clothing',
+  },
+  {
+    id: 4,
+    title: 'Running Shoes',
+    description: 'Lightweight and comfortable running shoes with advanced cushioning.',
+    price: 75,
+    image: '',
+    category: 'Footwear',
+  },
+  {
+    id: 5,
+    title: 'Smart Watch',
+    description: 'Fitness tracker with heart rate monitor and waterproof design.',
+    price: 60,
+    image: '',
+    category: 'Wearables',
+  },
+  {
+    id: 6,
+    title: 'Gaming Laptop',
+    description: 'High-performance laptop with 16GB RAM and RTX 3060 graphics.',
+    price: 30,
+    image: '',
+    category: 'Electronics',
+  },
+  {
+    id: 7,
+    title: 'Ceramic Coffee Mug',
+    description: 'Handcrafted ceramic mug with a minimalist design, 12oz capacity.',
+    price: 40,
+    image: '',
+    category: 'Home & Kitchen',
+  },
+  {
+    id: 8,
+    title: 'Wireless Mouse',
+    description: 'Ergonomic wireless mouse with adjustable DPI settings.',
+    price: 60,
+    image: '',
+    category: 'Accessories',
+  },
+  {
+    id: 9,
+    title: 'Backpack',
+    description: 'Durable backpack with laptop compartment and water-resistant material.',
+    price: 45,
+    image: '',
+    category: 'Accessories',
+  },
+  {
+    id: 10,
+    title: 'Electric Kettle',
+    description: '1.7L stainless steel kettle with fast boiling and auto shut-off.',
+    price: 70,
+    image: '',
+    category: 'Home & Kitchen',
+  },
+  {
+    id: 11,
+    title: 'Sunglasses',
+    description: 'Polarized sunglasses with UV protection and stylish design.',
+    price: 100,
+    image: '',
+    category: 'Accessories',
+  },
+]
+
+export const categories = [
+  'All',
+  'Shoes',
+  'T-Shirt',
+  'Clothes',
+  'Books',
+  'Accessories',
+  'Universal',
+]
