@@ -1,6 +1,7 @@
 'use client'
 import { Button } from '@/components/ui/button'
 import { formatPrice } from '@/lib/functions'
+import { cn } from '@/lib/utils'
 import { IProduct } from '@/types'
 import { HeartIcon } from 'lucide-react'
 import Image from 'next/image'
@@ -39,9 +40,10 @@ const ProductCard = ({ id, title, price, image, category }: IProduct) => {
             variant={isLiked ? 'ghost' : 'default'}
             onClick={handleLikeClick}>
             <HeartIcon
-              className={`size-4 transition-colors ${
-                isLiked ? 'fill-blue-500 text-blue-500' : 'fill-white'
-              }`}
+              className={cn(
+                'size-4 transition-colors',
+                isLiked ? 'fill-blue-500 text-blue-500' : 'fill-white',
+              )}
             />
           </Button>
         </div>

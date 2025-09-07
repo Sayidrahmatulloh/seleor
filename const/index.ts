@@ -1,4 +1,5 @@
-import { IProduct } from '@/types'
+import { IFilterOption, IMenuItem, IProduct, IProfileInfo, IStatItem } from '@/types'
+import { BanknoteIcon, HeartIcon, Settings2Icon, ShuffleIcon, UserIcon } from 'lucide-react'
 
 export const products: IProduct[] = [
   {
@@ -92,12 +93,31 @@ export const products: IProduct[] = [
   },
 ]
 
-export const categories = [
-  'All',
-  'Shoes',
-  'T-Shirt',
-  'Clothes',
-  'Books',
-  'Accessories',
-  'Universal',
+export const categories: IFilterOption[] = [
+  { label: 'All', value: 'all' },
+  { label: 'Shoes', value: 'shoes' },
+  { label: 'T-Shirt', value: 'tshirt' },
+  { label: 'Clothes', value: 'clothes' },
+  { label: 'Books', value: 'books' },
+  { label: 'Accessories', value: 'accessories' },
+  { label: 'Universal', value: 'univercel' },
+]
+
+export const menuItems: IMenuItem[] = [
+  { label: 'Personal information', route: '/dashboard', icon: UserIcon },
+  { label: 'Orders', route: '/dashboard/orders', icon: ShuffleIcon },
+  { label: 'Payments', route: '/dashboard/payments', icon: BanknoteIcon },
+  { label: 'Watch list', route: '/dashboard/watch-list', icon: HeartIcon },
+  { label: 'Settings', route: '/dashboard/settings', icon: Settings2Icon },
+]
+
+export const statCards: IStatItem[] = [
+  { icon: ShuffleIcon, value: 3, label: 'Orders' },
+  { icon: BanknoteIcon, value: 4, label: 'Payments' },
+  { icon: HeartIcon, value: 8, label: 'Watch list' },
+]
+
+export const profileInfoList: IProfileInfo[] = [
+  { id: 1, label: 'Full Name', value: 'Sayidrahmatulloh Hikmatullayev' },
+  { id: 2, label: 'Email', value: 'sayidrahmatulloh@gmail.com' },
 ]

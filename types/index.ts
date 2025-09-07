@@ -1,3 +1,5 @@
+import { LucideIcon } from 'lucide-react'
+
 export interface ChildProps {
   children: React.ReactNode
 }
@@ -15,4 +17,38 @@ export interface IProduct {
   image: string
   price: number
   category: string
+}
+export interface IMenuItem {
+  label: string
+  route: string
+  icon: LucideIcon
+}
+export interface IStatItem {
+  icon: LucideIcon
+  value: number
+  label: string
+}
+
+export interface IProfileInfo {
+  id: number
+  label: string
+  value: string
+}
+export interface ISearchInput {
+  placeholder: string
+  defaultValue?: string
+  onSearch: (value: string) => void
+}
+
+export interface IFilterOption {
+  label: string
+  value: string
+}
+
+export interface IFilterSelect {
+  onValueChange: (label: string, value: string) => void
+  defaultValue?: string
+  options: IFilterOption[]
+  placeholder: string
+  params: string
 }
