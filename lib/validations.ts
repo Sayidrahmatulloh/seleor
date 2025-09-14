@@ -35,3 +35,34 @@ export const registerSchema = z
     message: 'Passwords do not match',
     path: ['confirmPassword'],
   })
+
+export const passwordSchema = z
+  .object({
+    oldPassword: z.string().min(6, { message: 'Password must be at least 6 characters' }),
+    newPassword: z.string().min(6, { message: 'Password must be at least 6 characters' }),
+    confirmNewPassword: z.string().min(6, { message: 'Password must be at least 6 characters' }),
+  })
+  .refine((data) => data.newPassword === data.confirmNewPassword, {
+    message: 'Password do not match',
+    path: ['confirmNewPassword'],
+  })
+
+export const fullNameSchema = z.object({
+  fullName: z.string().min(3, { message: 'Full name at least 3 characters' }),
+})
+
+export const emailSchema = z.object({
+  email: z
+    .string()
+    .min(1, { message: 'Email is required' })
+    .email({ message: 'Invalid email address' }),
+})
+
+export const productSchema = z.object({
+  title: z.string().min(3, { message: 'Name must be at least 3 characters' }),
+  price: z.string(),
+  description: z.string().min(10, { message: 'Description must be at least 10 characters' }),
+  category: z.string(),
+  image: z.string(),
+  imageKey: z.string(),
+})

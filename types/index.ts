@@ -31,6 +31,8 @@ export interface IStatItem {
 
 export interface IProfileInfo {
   id: number
+  name: 'email' | 'fullName'
+  type: string
   label: string
   value: string
 }
@@ -46,9 +48,14 @@ export interface IFilterOption {
 }
 
 export interface IFilterSelect {
-  onValueChange: (label: string, value: string) => void
+  onValueChange?: (label: string, value: string) => void
   defaultValue?: string
   options: IFilterOption[]
   placeholder: string
   params: string
+}
+
+export interface ISidebar {
+  sidebarTitle: string
+  sidebarMenuItems: IMenuItem[]
 }
